@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #080b09;
+    color: #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    text-align: center;
+    padding: 55px 20px 35px;
+
+    background:
+        radial-gradient(circle at 50% 0%, #1b3a2a 0%, transparent 45%),
+        #080b09;
+
+    border-bottom: 1px solid #9cff57;
+}
+
+h1 {
+    margin: 0;
+
+    color: #b7ff6a;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow: 0 0 18px rgba(156, 255, 87, 0.25);
+}
+
+h3 {
+    margin-top: 12px;
+
+    color: #91a58f;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+
+/* ===== FORMULARIO ===== */
+
+form {
+    width: 90%;
+    max-width: 620px;
+
+    margin: 45px auto;
+    padding: 35px;
+
+    background: rgba(18, 23, 19, 0.95);
+
+    border: 1px solid #26352a;
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(100, 255, 100, 0.04);
+
+    backdrop-filter: blur(8px);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: #d7ffbd;
+    text-align: center;
+
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+
+/* ===== CAMPOS ===== */
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a9bca8;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: #0b100d;
+    color: #eeeeee;
+
+    border: 1px solid #304235;
+    border-radius: 9px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #a8ff63;
+
+    box-shadow:
+        0 0 0 2px rgba(168, 255, 99, 0.08),
+        0 0 15px rgba(168, 255, 99, 0.08);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ===== CHECKBOX ===== */
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+    accent-color: #a8ff63;
+}
+
+.checkbox-group label {
+    margin: 0;
+}
+
+
+/* ===== BOTÓN ===== */
+
+button {
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 14px;
+
+    background: #a8ff63;
+    color: #071008;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #c4ff91;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(168, 255, 99, 0.18);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    margin-top: auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #060806;
+
+    border-top: 1px solid #26352a;
+
+    color: #657264;
+
+    font-size: 13px;
+}
+
+footer strong {
+    color: #a8ff63;
+}
+
+
+.boton {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    background: #a8ff63;
+    color: #071008;
+
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: #c4ff91;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 255, 99, 0.18);
+}

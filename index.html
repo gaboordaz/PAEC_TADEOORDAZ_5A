@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO PAEC (PEC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+      <h1>Redes de Bienestar</h1>
+      <h3>Salud Mental y Éxito Escolar</h3>
+  </header>
+  
+  <form action="sub1.html" method="POST">
+      <h2>Registro de Visita</h2>
+  
+      <div>
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+      </div>
+
+      <br>
+  
+      <div>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+      </div>
+
+      <br>
+  
+      <div>
+          <label for="motivo">Motivo de la visita:</label>
+          <select id="motivo" name="motivo">
+              <option value="informacion">Información general</option>
+              <option value="apoyo">Solicitar apoyo</option>
+              <option value="orientacion">Orientación escolar</option>
+              <option value="otro">Otro</option>
+          </select>
+      </div>
+
+      <br>
+  
+      <div>
+          <label for="origen">¿Cómo nos conociste?</label>
+          <input type="text" id="origen" name="origen" placeholder="Ej. Redes sociales">
+      </div>
+
+      <br>
+  
+      <div>
+          <label for="comentarios">Comentarios:</label>
+          <textarea id="comentarios" name="comentarios" rows="4"
+              placeholder="Escribe aquí tus comentarios..."></textarea>
+      </div>
+
+      <br>
+  
+      <div class="checkbox-group">
+          <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">
+                Acepto la política de privacidad.
+            </label>
+      </div>
+
+      <br>
+       
+      <a href="sub1.html" class="boton">
+        Registrar Visita
+      </a>
+
+  </form>
+
+  <br>
+  <hr>
+
+
+  <footer>
+    <H2>
+        Derechos Reservados Tadeo Ordaz 5A - 2026
+    </H2>
+  </footer>
+  
+    
+</body>
+</html>

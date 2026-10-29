@@ -1,0 +1,555 @@
+/* elimina los espacios predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* permite desplazarse suavemente */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* estilo general de la página */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef3f1;
+    color: #26332f;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.chat-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 7%;
+
+    background: #102a43;
+    color: white;
+
+    box-shadow: 0 4px 18px rgba(16, 42, 67, 0.15);
+}
+
+
+/* agrupa la foto y los datos del profesional */
+.perfil-profesional {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* hace que la foto pueda recibir clic */
+.foto-link {
+    display: block;
+}
+
+
+/* fotografía del profesional */
+.foto-profesional {
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #55d6b0;
+
+    transition: 0.2s;
+}
+
+
+/* efecto cuando el usuario pasa sobre la foto */
+.foto-profesional:hover {
+    transform: scale(1.06);
+}
+
+
+/* datos que aparecen junto a la fotografía */
+.datos-profesional h1 {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+
+.datos-profesional p {
+    color: #ccd9e2;
+    font-size: 12px;
+}
+
+
+/* estado de disponibilidad */
+.estado {
+    display: block;
+
+    color: #55d6b0;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* enlace para conocer al equipo */
+.ver-perfil {
+    color: #a7e8d5;
+
+    font-size: 11px;
+
+    text-decoration: none;
+}
+
+
+.ver-perfil:hover {
+    text-decoration: underline;
+}
+
+
+/* enlace para volver a sub1.html */
+.volver {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.volver:hover {
+    color: #55d6b0;
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.contenedor-chat {
+    width: 92%;
+    max-width: 900px;
+
+    margin: 35px auto;
+}
+
+
+/* ================================
+   BIENVENIDA
+================================ */
+
+.bienvenida {
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #dce7e2;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.06);
+}
+
+
+.etiqueta {
+    color: #159a78;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.bienvenida h2 {
+    color: #102a43;
+
+    font-size: 28px;
+
+    margin: 8px 0 10px;
+}
+
+
+.bienvenida p {
+    max-width: 720px;
+
+    color: #52625d;
+}
+
+
+.bienvenida small {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #7b8985;
+
+    font-size: 11px;
+}
+
+
+/* ================================
+   VENTANA DEL CHAT
+================================ */
+
+.chat {
+    min-height: 430px;
+
+    max-height: 570px;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #dce7e2;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(16, 42, 67, 0.08);
+}
+
+
+/* estilo general de los mensajes */
+.mensaje {
+    max-width: 76%;
+
+    padding: 15px 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    animation: aparecer 0.25s ease;
+}
+
+
+/* mensaje del profesional */
+.mensaje-profesional {
+    margin-right: auto;
+
+    background: #e7f3ef;
+
+    border-bottom-left-radius: 4px;
+}
+
+
+/* mensaje del estudiante */
+.mensaje-estudiante {
+    margin-left: auto;
+
+    background: #102a43;
+
+    color: white;
+
+    border-bottom-right-radius: 4px;
+}
+
+
+/* encabezado de cada mensaje */
+.encabezado-mensaje {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+}
+
+
+/* fotografía pequeña dentro de los mensajes */
+.mini-foto {
+    width: 27px;
+    height: 27px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* hora del mensaje */
+.hora {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #7d8985;
+
+    font-size: 10px;
+}
+
+
+/* animación para nuevos mensajes */
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   INDICADOR DE ESCRITURA
+================================ */
+
+.escribiendo {
+    padding: 10px 5px;
+
+    color: #71807b;
+
+    font-size: 12px;
+
+    font-style: italic;
+}
+
+
+.oculto {
+    display: none;
+}
+
+
+/* ================================
+   OPCIONES
+================================ */
+
+.opciones {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+.opciones button {
+    padding: 14px 18px;
+
+    background: white;
+
+    color: #102a43;
+
+    border: 1px solid #cbdad5;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    transition: 0.2s;
+}
+
+
+.opciones button:hover {
+    background: #e7f3ef;
+
+    border-color: #159a78;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   MENSAJE DEL PROYECTO
+================================ */
+
+.mensaje-proyecto {
+    margin-top: 40px;
+
+    padding: 35px;
+
+    background: #102a43;
+
+    color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+
+.mensaje-proyecto h2 {
+    margin: 8px auto 12px;
+
+    max-width: 650px;
+
+    font-size: 28px;
+}
+
+
+.mensaje-proyecto p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #d6e0e8;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 30px;
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    background: #0b2f2a;
+
+    color: #aebfba;
+
+    border-top: 4px solid #159a78;
+}
+
+
+footer strong {
+    color: white;
+}
+
+
+footer p {
+    margin-top: 5px;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 650px) {
+
+    .chat-header {
+        padding: 13px 5%;
+    }
+
+
+    .datos-profesional p,
+    .ver-perfil {
+        display: none;
+    }
+
+
+    .volver {
+        font-size: 12px;
+    }
+
+
+    .bienvenida {
+        padding: 24px;
+    }
+
+
+    .bienvenida h2 {
+        font-size: 23px;
+    }
+
+
+    .chat {
+        padding: 20px;
+
+        min-height: 400px;
+    }
+
+
+    .mensaje {
+        max-width: 88%;
+    }
+
+
+    .opciones {
+        grid-template-columns: 1fr;
+    }
+
+
+    .mensaje-proyecto {
+        padding: 25px;
+    }
+
+}
+
+
+/* ================================
+   PERFILES PROFESIONALES
+================================ */
+
+/* fotografía de los profesionales */
+.profesional-card img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    border: 3px solid #159a78;
+}
+
+
+/* círculo usado cuando no hay una fotografía */
+.avatar-equipo {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #102a43;
+
+    color: #55d6b0;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* especialidad del profesional */
+.profesional-card strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #159a78;
+
+    font-size: 13px;
+}

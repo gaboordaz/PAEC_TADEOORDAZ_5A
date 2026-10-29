@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat de orientación | Redes de Bienestar</title>
+
+    <!-- conecta esta página con los estilos propios del chat -->
+    <link rel="stylesheet" href="chatstyle.css">
+</head>
+
+<body>
+
+    <!-- encabezado del chat -->
+    <header class="chat-header">
+
+        <div class="perfil-profesional">
+
+            <!-- la foto lleva a la página de profesionales -->
+            <a href="profesionales.html" class="foto-link" title="Conocer al equipo">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80"
+                    alt="Profesional de orientación de Redes de Bienestar"
+                    class="foto-profesional">
+
+            </a>
+
+            <div class="datos-profesional">
+
+                <span class="estado">
+                    ● disponible
+                </span>
+
+                <h1>
+                    Andrea Martínez
+                </h1>
+
+                <p>
+                    Orientación juvenil · Redes de Bienestar
+                </p>
+
+                <a href="profesionales.html" class="ver-perfil">
+                    ver perfil
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- regreso a la página principal -->
+        <a href="sub1.html" class="volver">
+            ← volver
+        </a>
+
+    </header>
+
+
+    <!-- contenido principal -->
+    <main class="contenedor-chat">
+
+        <!-- presentación del espacio -->
+        <section class="bienvenida">
+
+            <span class="etiqueta">
+                ESPACIO SEGURO
+            </span>
+
+            <h2>
+                Puedes comenzar por lo que te resulte más fácil.
+            </h2>
+
+            <p>
+                No necesitas encontrar las palabras perfectas. Elige una opción
+                y la conversación continuará dependiendo de lo que quieras
+                expresar.
+            </p>
+
+            <small>
+                simulación educativa · no sustituye la atención profesional
+            </small>
+
+        </section>
+
+
+        <!-- ventana donde aparecerán los mensajes -->
+        <section
+            id="chat"
+            class="chat"
+            aria-label="Conversación simulada">
+
+            <!-- primer mensaje del profesional -->
+            <div class="mensaje mensaje-profesional">
+
+                <div class="encabezado-mensaje">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=100&q=80"
+                        alt="Andrea Martínez"
+                        class="mini-foto">
+
+                    <strong>
+                        Andrea
+                    </strong>
+
+                </div>
+
+                <p>
+                    Hola. Soy Andrea, parte del equipo de orientación de Redes
+                    de Bienestar. Este espacio está pensado para que puedas
+                    expresar cómo te has estado sintiendo.
+                </p>
+
+                <span class="hora">
+                    ahora
+                </span>
+
+            </div>
+
+
+            <div class="mensaje mensaje-profesional">
+
+                <p>
+                    Para comenzar, ¿cómo te has sentido últimamente?
+                </p>
+
+                <span class="hora">
+                    ahora
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- indicador que javascript muestra mientras prepara una respuesta -->
+        <div id="escribiendo" class="escribiendo oculto">
+            Andrea está escribiendo...
+        </div>
+
+
+        <!-- aquí javascript colocará las opciones disponibles -->
+        <section
+            id="opciones"
+            class="opciones"
+            aria-label="Opciones para continuar la conversación">
+
+            <button data-opcion="bien">
+                Me he sentido bien
+            </button>
+
+            <button data-opcion="regular">
+                Más o menos
+            </button>
+
+            <button data-opcion="mal">
+                No me he sentido bien
+            </button>
+
+            <button data-opcion="preocupado">
+                Hay algo que me preocupa
+            </button>
+
+        </section>
+
+
+        <!-- mensaje que relaciona el chat con el objetivo del proyecto -->
+        <section class="mensaje-proyecto">
+
+            <span class="etiqueta">
+                REDES DE BIENESTAR
+            </span>
+
+            <h2>
+                Cuidar la mente también ayuda a construir un mejor futuro escolar.
+            </h2>
+
+            <p>
+                Reconocer lo que sentimos, pedir orientación y mantener una red
+                de apoyo puede facilitar que los jóvenes enfrenten mejor los
+                retos académicos y personales.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de página -->
+    <footer>
+
+        <strong>
+            Redes de Bienestar
+        </strong>
+
+        <p>
+            Salud Mental y Éxito Escolar
+        </p>
+
+        <p>
+            simulación educativa creada para fines escolares
+        </p>
+
+    </footer>
+
+
+    <!-- conecta la página con la lógica de la conversación -->
+    <script src="chat.js"></script>
+
+</body>
+
+</html>
